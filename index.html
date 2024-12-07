@@ -46,7 +46,59 @@
                   <i class="fa-solid fa-search"></i>
                 </button>
               </div>
-              <div class="col-md-7"></div>
+              <div
+                class="col-md-7 d-flex justify-content-end align-items-center"
+              >
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >English</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#"
+                      ><i class="fa-solid fa-bell"></i>
+                      <div class="num-circle"></div>
+                      <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">Notification 1</a>
+                        <a href="#" class="dropdown-item">Notification 2</a>
+                        <a href="#" class="dropdown-item">Notification 3</a>
+                        <a href="#" class="dropdown-item">Notification 4</a>
+                        <a href="#" class="dropdown-item">Notification 5</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">View all </a>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#"
+                      ><i class="fa-solid fa-envelope"></i>
+                      <div class="num-circle bg-primary"></div>
+                      <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">Notification 1</a>
+                        <a href="#" class="dropdown-item">Notification 2</a>
+                        <a href="#" class="dropdown-item">Notification 3</a>
+                        <a href="#" class="dropdown-item">Notification 4</a>
+                        <a href="#" class="dropdown-item">Notification 5</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">View all </a>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <div class="user-circle">
+                        <img src="/img/user.jpg" alt="" />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><i class="fa-solid fa-ellipsis-vertical"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -206,14 +258,79 @@
               </div>
             </div>
           </div>
-          <div class="col-md-9"></div>
+          <div class="col-md-9 p-2 dashboard-area">
+            <div class="row m-0">
+              <div class="col-md-12">
+                <h5 class="p-2">Dashboard</h5>
+              </div>
+            </div>
+            <div class="row m-0">
+              <div class="col-md-6 d-flex p-2">
+                <div class="card p-2 text-center">
+                  <b>Total Students</b>
+                  <br />
+                  <i class="fa-solid fa-users fa-3x text-warning"></i>
+                  <h3 class="p-2"><b>4,567</b></h3>
+                  <p class="text-success">
+                    <i class="fa-solid fa-chart-line text-success"></i>
+                    10.32% <span class="text-dark">Since</span>
+                  </p>
+                  <small class="text-secondary">last week</small>
+                </div>
+                <div class="card p-2 text-center">
+                  <b>New Students</b> <br />
+                  <i class="fa-solid fa-user-plus fa-3x text-success"></i>
+                  <h3 class="p-2"><b>789</b></h3>
+                  <p class="text-success">
+                    <i class="fa-solid fa-chart-line text-success"></i>
+                    2.13% <span class="text-dark">Since</span>
+                  </p>
+                  <small class="text-secondary">last week</small>
+                  <br />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <canvas
+                  id="myChart"
+                  style="width: 100%; max-width: 600px"
+                  class="card p-2"
+                ></canvas>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+      var yValues = [55, 49, 44, 24, 15, 12];
+      var barColors = ["red", "green", "blue", "orange", "brown"];
+
+      new Chart("myChart", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              backgroundColor: barColors,
+              data: yValues,
+            },
+          ],
+        },
+        options: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: "World Wine Production 2018",
+          },
+        },
+      });
+    </script>
   </body>
 </html>
