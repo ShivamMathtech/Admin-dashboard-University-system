@@ -1,0 +1,52 @@
+.main-page {
+  height: 100vh;
+  background-color: #e9edf2;
+}
+header {
+  height: 80px;
+  background-color: #ffffff;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.logo-box {
+  height: 80px;
+  background-color: #6673fc;
+}
+.logo-text {
+  font-weight: 500;
+  font-size: 1.7em;
+}
+.section-1 {
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+}
+.sidebar {
+  background-color: #ffffff;
+}
+.user-image-box {
+  height: 200px;
+}
+.admin-img img {
+  height: 100px;
+  width: 80px;
+  border-radius: 5px;
+}
+.admin-img {
+  font-weight: 500;
+}
+.nav-bar {
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
